@@ -1,0 +1,14 @@
+- Name: "sanji"
+  DOB: "190-08-7"
+  Mobile: 23455633 
+  Addresses: 
+  - FlatNumber: "109"
+    Street: "Gandi Nagar"
+    City: "hyd"
+    type: "current"
+
+  - FlatNumber: "107"
+    Street: "kalayan Nagar"
+    City: "KNR"
+    type: "Perm"
+

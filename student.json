@@ -1,0 +1,47 @@
+{
+    "students": [
+       {  "firstname": "sai",
+           "DOB" :"3/03/197",
+           "Address": [
+             {
+                    "type": "perm",
+                    "flatNumber": 104,
+                    "street": "gandhi nagar",
+                    "city": "hyderabad"
+                },
+                {
+                    "type": "perm",
+                    "flatNumber": 104,
+                    "street": "gandhi nagar",
+                    "city": "hyderabad"
+                } 
+           ],
+           "skills": ["java", "devops", "cloud"]
+
+
+        },   
+    
+       {  "firstname": "sai",
+           "DOB" :"3/03/197",
+           "Address": [
+             {
+                    "type": "perm",
+                    "flatNumber": 104,
+                    "street": "gandhi nagar",
+                    "city": "hyderabad"
+                },
+                {
+                    "type": "perm",
+                    "flatNumber": 104,
+                    "street": "gandhi nagar",
+                    "city": "hyderabad"
+                } 
+           ],
+           "skills": ["java", "devops", "cloud"]
+
+
+        }
+    
+    ]
+    
+}

@@ -1,10 +1,8 @@
 - name: variables
   hosts: localhost
   connection: local
-  vars: 
-   COURSE: Devops
-   DURATION: 130HRS
-   TRAINER: Shini
+  vars_files:
+  - course.yaml   
   tasks:
   - name: print variables
     vars:

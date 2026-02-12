@@ -6,7 +6,7 @@
    DURATION: 130HRS
    TRAINER: Shini
   tasks:
-   - name: print variables
-     ansible.builtin.debug:
-      msg: "coursr is {{ COURSE }}, Trainer is {{ TRAINER }}, Duration is {{ DURATION }} "
+  - name: print variables
+    ansible.builtin.debug:
+     msg: "coursr is {{ COURSE }}, Trainer is {{ TRAINER }}, Duration is {{ DURATION }} "
 

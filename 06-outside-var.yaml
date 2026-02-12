@@ -1,5 +1,5 @@
 - name: variables
-  hosts: localhost
+  hosts: local
   connection: local
   vars_files:
   - course.yaml   

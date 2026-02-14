@@ -1,0 +1,25 @@
+- name: data types
+  hosts: local
+  connection: local
+  vars:
+   PROGRAM: "DevSecOps"
+   DURAION: 140 
+   IS_LIVE: true
+   DETAILs: #map/dic
+    MONTHS: 4months
+    TRAINER: Siva
+   TOPICS: #List []
+    - Linux
+    - Shell
+    - AWS
+   tasks:
+    - name: print variables
+      ansible.builtin.debug:
+       msg: |
+        {{ PROGRAM }}
+        {{ DURAION }}
+        {{ IS_LIVE }}
+        {{ DETAILs }}
+        {{ TOPICS }}  
+
+

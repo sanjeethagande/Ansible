@@ -1,8 +1,8 @@
 - name: variable preference
   hosts: local
   connection: local
-  # vars:
-  #  NAME: "ansible form play"
+  vars:
+   NAME: "ansible form play"
   vars_files:
     - course.yaml
   vars_prompt:
@@ -19,3 +19,4 @@
   #Args
   #Tasks    
   #play    
+  #inventory

@@ -2,9 +2,9 @@
   hosts: local
   connection: local
   vars:
-   NAME: "ansible form play"
-  vars_files:
-    - course.yaml
+   NAME: "ansible from play"
+  # vars_files:
+  #   - course.yaml
   vars_prompt:
     - name: NAME
       prompt: please enter name

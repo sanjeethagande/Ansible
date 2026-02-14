@@ -10,9 +10,9 @@
       prompt: please enter name
       private: false
   tasks:
-  - name: print from 
-    vars:
+   - name: print from 
+     vars:
       NAME:ansible from tasks
-    ansible.builtin.debug:
-    msg: "Hi {{ NAME }}"
+     ansible.builtin.debug:
+      msg: "Hi {{ NAME }}"
       

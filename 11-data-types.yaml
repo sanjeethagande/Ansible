@@ -9,9 +9,9 @@
     MONTHS: 4months
     TRAINER: Siva
    TOPICS: #List []
-    - Linux
-    - Shell
-    - AWS
+   - Linux
+   - Shell
+   - AWS
    tasks:
     - name: print variables
       ansible.builtin.debug:

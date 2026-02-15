@@ -3,10 +3,26 @@
   connection: local
   vars:
    topics: Linux,JSON,ansible.terraform
-   tags:
-     name: ansible
-     project: roboshop
-     component: catalogue
+   course: "DevOps with Ansible"
+   myIp: "192.23.89.123"
+   tagsMap:
+      name: ansible
+      project: roboshop
+      component: catalogue
+   tagsList: [
+        {
+            "key": "name",
+            "value": "ansible"
+        },
+        {
+            "key": "project",
+            "value": "roboshop"
+        },
+        {
+            "key": "component",
+            "value": "catalogue"
+        }
+    ]
   tasks:
   - name : greeting
     ansible.builtin.debug:

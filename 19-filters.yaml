@@ -1,0 +1,39 @@
+- name: demo on filters
+  hosts: local
+  connection: local
+  vars:
+   topics: Linux,JSON,ansible.terraform
+   tags:
+     name: ansible
+     project: roboshop
+     component: catalogue
+  tasks:
+  - name : greeting
+  ansible.builtin.debug:
+   msg: "Hi , {{ GREETING | default('good morning') }}"
+
+- name: Convert String to list
+  ansible.builtin.debug:
+   msg: "{{ topics | split (',') }}"
+
+- name: Convert map to list
+  ansible.builtin.debug:
+   msg: "{{tagsMap | dict2items }}"
+
+- name: Convert list to map
+  ansible.builtin.debug:
+   msg: "{{ tagList | item2dict }}" 
+
+- name: Convert list to map
+  ansible.builtin.debug:
+   msg: "{{ tagList | item2dict }}" 
+
+- name: reads students yaml
+  ansible.builtin.set_fact:
+   student_yaml: "{{ lookup ('file', students.yaml) | from_yaml }}"
+
+- name: convert YAML to JSON
+  ansible.builtin.debug:
+   msg: "{{ student_yaml | to_nice_json }}"
+
+

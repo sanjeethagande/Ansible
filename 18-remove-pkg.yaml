@@ -1,0 +1,12 @@
+- name: remove packages
+  hosts: local
+  connection: local
+  tasks:
+   - name: remove package
+     ansible.builtin.package:
+      msg: "{{ item.name }}"
+      state: "{{ item.state}}"
+      loop:
+       - {name: "mysql", state: "absent"}
+       - {name: "nginx", state: "present"}
+       - {name: "zip", state: "absent"}

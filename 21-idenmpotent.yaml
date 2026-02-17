@@ -1,0 +1,7 @@
+- name: demo on idenmpotent
+  hosts: local
+  connection: local
+  tasks:
+  - name: create user
+    ansible.builtin.user:
+     name: sanje

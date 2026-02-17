@@ -3,15 +3,15 @@
   connection: local
   become: yes
   tasks:
-   - name: check user exists or not
-     ansible.builtin.command: id roboshop
-     register: user_output
-     ignore_error: true
+  - name: check user exists or not
+    ansible.builtin.command: id roboshop
+    register: user_output
+    ignore_error: true
 
-   - name: print user user_output
-     ansible.builtin.debug:
-      msg: "{{ user_output }}"  
+  - name: print user user_output
+    ansible.builtin.debug:
+     msg: "{{ user_output }}"  
 
-   - name: create user
-     ansible.builtin.command: useradd roboshop
-     when: user_output.rc != 0    
+  - name: create user
+    ansible.builtin.command: useradd roboshop
+    when: user_output.rc != 0    

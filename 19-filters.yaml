@@ -1,15 +1,16 @@
+
 - name: demo on filters
   hosts: local
   connection: local
   vars:
-   topics: Linux,JSON,ansible.terraform
-   course: "DevOps with Ansible"
-   myIp: "192.23.89.123"
-   tagsMap:
+    topics: linux, shell, ansible, terraform
+    course: "DevOps with Ansible"
+    myIp: "192.23.89.123"
+    tagsMap:
       name: ansible
       project: roboshop
       component: catalogue
-   tagsList: [
+    tagsList: [
         {
             "key": "name",
             "value": "ansible"
@@ -24,28 +25,38 @@
         }
     ]
   tasks:
-  - name : greeting
+  - name: greeting
     ansible.builtin.debug:
-     msg: "Hi ,{{ GREETING | default('good morning') }}"
+      msg: "Hello, {{ GREETING | default('Good Morning') }}"
 
-  - name: Convert String to list
+  - name: convert string to list
     ansible.builtin.debug:
-     msg: "{{ topics | split (',') }}"
+      msg: "{{ topics | split(',') }}"
 
-  - name: Convert map to list
+  - name: convert map to list
     ansible.builtin.debug:
-     msg: "{{ tagsMap | dict2items }}"
+      msg: "{{ tagsMap | dict2items }}"
 
-  - name: Convert list to map
+  - name: convert list to map
     ansible.builtin.debug:
-     msg: "{{ tagsList | items2dict }}" 
+      msg: "{{ tagsList | items2dict }}"
 
-  - name: reads students yaml
-    ansible.builtin.set_fact:
-     student_yaml: "{{ lookup ('file', students.yaml | from_yaml )}}"
+  - name: read students yaml
+    ansible.builtin.set_fact: # setting the variable
+      student_yaml: "{{ lookup('file', 'students.yaml' ) | from_yaml }}"
 
   - name: convert YAML to JSON
     ansible.builtin.debug:
-     msg: "{{ student_yaml | to_nice_json }}"
+      msg: "{{ student_yaml | to_nice_json  }}"
 
+  - name: convert to upper case
+    ansible.builtin.debug:
+      msg: "{{ course | upper }}"
 
+  - name: convert to lower case
+    ansible.builtin.debug:
+      msg: "{{ course | lower }}"
+
+  - name: check ipv4
+    ansible.builtin.debug:
+      msg: "{{ myIp | ansible.utils.ipv4 }}"
